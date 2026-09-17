@@ -1,23 +1,44 @@
 # C Programming Assignments - System Design & Documentation
 
-Welcome to the repository! This project contains modular C programs along with their system design documentation, featuring explicit Problem Analysis Charts (PAC) and Input-Process-Output (IPO) tables.
+Welcome to the repository! This project contains all course assignments organized into **Part A (Algorithms & Pseudocode)** and **Part B (System Design, PAC/IPO Tables, & C Programs)**.
 
 ---
 
 ## 📑 Master Table of Contents
 
+### Part A: Algorithms & Pseudocode
+| Question # | Topic / Description | Location |
+| :---: | :--- | :--- |
+| **Q1** | Basic Conditionals & Flow Logic | [View Part A](#part-a-algorithms--pseudocode-exercises) |
+| **Q2** | Iteration & Loop Structures | [View Part A](#part-a-algorithms--pseudocode-exercises) |
+| **Q3** | Arithmetic Calculations & Formulas | [View Part A](#part-a-algorithms--pseudocode-exercises) |
+| **Q4** | Input Validation & Error Checks | [View Part A](#part-a-algorithms--pseudocode-exercises) |
+| **Q5** | Sequential / Batch Processing Logic | [View Part A](#part-a-algorithms--pseudocode-exercises) |
+
+### Part B: C Programs & System Design (`q1.c` - `q6.c`)
 | Program # | Program Name | Source File Name | Documentation Section |
 | :---: | :--- | :--- | :--- |
-| **1** | Hotel Booking System | `q1.c` | [View Section](#program-1-hotel-booking-system) |
-| **2** | Elevator Control System | `q2.c` | [View Section](#program-2-elevator-control-system) |
-| **3** | Student Results Processing | `q3.c` | [View Section](#program-3-student-results-processing-system) |
-| **4** | Item Billing & Tax Calculator | `q4.c` | [View Section](#program-4-item-billing--tax-calculator) |
-| **5** | Campus Parking Management System | `q5.c` | [View Section](#program-5-campus-parking-management-system) |
-| **6** | Campus Parking & EV Charging System | `q6.c` | [View Section](#program-6-campus-parking--ev-charging-system) |
+| **1** | Hotel Booking System | `q1.c` | [View Section](#program-1-hotel-booking-system-q1c) |
+| **2** | Elevator Control System | `q2.c` | [View Section](#program-2-elevator-control-system-q2c) |
+| **3** | Student Results Processing | `q3.c` | [View Section](#program-3-student-results-processing-system-q3c) |
+| **4** | Item Billing & Tax Calculator | `q4.c` | [View Section](#program-4-item-billing--tax-calculator-q4c) |
+| **5** | Campus Parking Management System | `q5.c` | [View Section](#program-5-campus-parking-management-system-q5c) |
+| **6** | Campus Parking & EV Charging System | `q6.c` | [View Section](#program-6-campus-parking--ev-charging-system-q6c) |
 
 ---
 
-## Program-by-Program Documentation
+## Part A: Algorithms & Pseudocode Exercises
+
+### Overview of Part A Questions
+* **Q1 (Conditional Logic)**: Evaluates decision-making structures using relational operators and multi-branch execution.
+* **Q2 (Loop Control)**: Demonstrates repetitive execution patterns using counter-controlled loops.
+* **Q3 (Mathematical Operations)**: Focuses on formula implementation, accumulation, and average computations.
+* **Q4 (Input Validation)**: Implements defensive programming principles to filter invalid ranges or incorrect inputs.
+* **Q5 (Batch Processing)**: Manages sequential data handling and state tracking across multiple entities.
+
+---
+
+## Part B: Program-by-Program Documentation
 
 ---
 
