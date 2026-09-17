@@ -8,12 +8,12 @@ Welcome to the repository! This project contains modular C programs along with t
 
 | Program # | Program Name | Source File Name | Documentation Section |
 | :---: | :--- | :--- | :--- |
-| **1** | Hotel Booking System | `hotel_booking.c` | [View Section](#program-1-hotel-booking-system) |
-| **2** | Elevator Control System | `elevator_control.c` | [View Section](#program-2-elevator-control-system) |
-| **3** | Student Results Processing | `student_results.c` | [View Section](#program-3-student-results-processing-system) |
-| **4** | Item Billing & Tax Calculator | `billing_system.c` | [View Section](#program-4-item-billing--tax-calculator) |
+| **1** | Hotel Booking System | `q1.c` | [View Section](#program-1-hotel-booking-system) |
+| **2** | Elevator Control System | `q2.c` | [View Section](#program-2-elevator-control-system) |
+| **3** | Student Results Processing | `q3.c` | [View Section](#program-3-student-results-processing-system) |
+| **4** | Item Billing & Tax Calculator | `q4.c` | [View Section](#program-4-item-billing--tax-calculator) |
 | **5** | Campus Parking Management System | `q5.c` | [View Section](#program-5-campus-parking-management-system) |
-| **6** | Campus Parking & EV Charging System | `q6.c` | [View Section](#program-6-campus-parking--ev-charging-management-system) |
+| **6** | Campus Parking & EV Charging System | `q6.c` | [View Section](#program-6-campus-parking--ev-charging-system) |
 
 ---
 
@@ -21,7 +21,7 @@ Welcome to the repository! This project contains modular C programs along with t
 
 ---
 
-### Program 1: Hotel Booking System (`hotel_booking.c`)
+### Program 1: Hotel Booking System (`q1.c`)
 
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
@@ -37,7 +37,7 @@ Welcome to the repository! This project contains modular C programs along with t
 
 ---
 
-### Program 2: Elevator Control System (`elevator_control.c`)
+### Program 2: Elevator Control System (`q2.c`)
 
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
@@ -53,7 +53,7 @@ Welcome to the repository! This project contains modular C programs along with t
 
 ---
 
-### Program 3: Student Results Processing System (`student_results.c`)
+### Program 3: Student Results Processing System (`q3.c`)
 
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
@@ -69,7 +69,7 @@ Welcome to the repository! This project contains modular C programs along with t
 
 ---
 
-### Program 4: Item Billing & Tax Calculator (`billing_system.c`)
+### Program 4: Item Billing & Tax Calculator (`q4.c`)
 
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
