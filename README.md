@@ -1,5 +1,3 @@
-# PF_theory-assigment-
-PF theory first assignment  , divided into two parts A (algorithm , pseudocode) and part b (ipo ,pac, algorithm ,flowchart ,C code)
 # C Programming Assignments - System Design & Documentation
 
 Welcome to the repository! This project contains modular C programs along with their system design documentation, featuring explicit Problem Analysis Charts (PAC) and Input-Process-Output (IPO) tables.
@@ -14,7 +12,8 @@ Welcome to the repository! This project contains modular C programs along with t
 | **2** | Elevator Control System | `elevator_control.c` | [View Section](#program-2-elevator-control-system) |
 | **3** | Student Results Processing | `student_results.c` | [View Section](#program-3-student-results-processing-system) |
 | **4** | Item Billing & Tax Calculator | `billing_system.c` | [View Section](#program-4-item-billing--tax-calculator) |
-| **5** | Campus Parking & EV Charging | `ev_charging_system.c` | [View Section](#program-5-campus-parking--ev-charging-management-system) |
+| **5** | Campus Parking Management System | `q5.c` | [View Section](#program-5-campus-parking-management-system) |
+| **6** | Campus Parking & EV Charging System | `q6.c` | [View Section](#program-6-campus-parking--ev-charging-management-system) |
 
 ---
 
@@ -27,14 +26,14 @@ Welcome to the repository! This project contains modular C programs along with t
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
 | :--- | :--- |
-| **Given (Inputs)** | • Total guests ($N$)<br>• Season choice (`1` for peak, `2` for off-peak)<br>• Room type choice (`1` standard, `2` deluxe, `3` suite)<br>• Number of nights stay |
+| **Given (Inputs)** | • Total guests ($N$)<br>• Season choice (`1` peak, `2` off-peak)<br>• Room type (`1` standard, `2` deluxe, `3` suite)<br>• Number of nights stay |
 | **Required (Outputs)** | • Final price and discount applied for each guest<br>• Cumulative total revenue for the hotel |
-| **Processing & Logic** | • Iterates through $N$ guests using a `while` loop.<br>• Selects base nightly rate via nested conditions based on season and room tier.<br>• Computes base cost ($\text{Rate} \times \text{Nights}$).<br>• Applies a 15% discount if nights $> 7$; otherwise, no discount.<br>• Accumulates each guest's final amount into `hotel_total_revenue`. |
+| **Processing & Logic** | • Iterates through guests using a loop.<br>• Assigns base nightly rates using nested conditions.<br>• Applies a 15% discount if stay duration $> 7$ nights.<br>• Accumulates total hotel revenue. |
 
 #### IPO Table (Input-Process-Output)
 | Inputs | Processing Steps | Outputs |
 | :--- | :--- | :--- |
-| • `guests`<br>• `season`<br>• `room_type`<br>• `nights_stay` | 1. Read total guest count ($N$).<br>2. Initialize loop counter and revenue accumulator to 0.<br>3. While counter $\le N$:<br>&nbsp;&nbsp;&nbsp;&nbsp;• Read season, room type, and nights.<br>&nbsp;&nbsp;&nbsp;&nbsp;• Assign base rate via condition checks.<br>&nbsp;&nbsp;&nbsp;&nbsp;• Compute base total cost.<br>&nbsp;&nbsp;&nbsp;&nbsp;• Check if nights $> 7$ for 15% discount.<br>&nbsp;&nbsp;&nbsp;&nbsp;• Accumulate final cost into hotel revenue.<br>&nbsp;&nbsp;&nbsp;&nbsp;• Print individual guest details and increment counter.<br>4. Print final hotel total revenue. | • Individual guest bills (`Rs. ...`)<br>• Discounts applied (`Rs. ...`)<br>• Hotel's Total Revenue (`Rs. ...`) |
+| • `guests`, `season`, `room_type`, `nights_stay` | 1. Read guest count and initialize variables.<br>2. Loop through each guest to read preferences.<br>3. Calculate base cost, check discounts, and accumulate revenue. | • Individual guest bills<br>• Discounts applied<br>• Hotel Total Revenue |
 
 ---
 
@@ -43,14 +42,14 @@ Welcome to the repository! This project contains modular C programs along with t
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
 | :--- | :--- |
-| **Given (Inputs)** | • Total number of floor requests ($i$)<br>• Sequence of requested floors |
-| **Required (Outputs)** | • Directional movement messages (moving up/down)<br>• Current floor updates and door opening notices |
-| **Processing & Logic** | • Iterates through floor requests sequentially using a decrementing loop.<br>• Compares `requested_floor` with `current_floor`.<br>• Dynamically updates `current_floor` after each request. |
+| **Given (Inputs)** | • Total number of floor requests<br>• Sequence of requested floors |
+| **Required (Outputs)** | • Directional movement logs (moving up/down)<br>• Door opening notices and current floor updates |
+| **Processing & Logic** | • Iterates sequentially through requests.<br>• Compares requested floor with current floor to determine direction.<br>• Updates current floor status dynamically. |
 
 #### IPO Table (Input-Process-Output)
 | Inputs | Processing Steps | Outputs |
 | :--- | :--- | :--- |
-| • Number of requests (`i`)<br>• `requested_floor` | 1. Read total number of requests.<br>2. Loop $N$ times to accept each `requested_floor`.<br>3. Compare request with `current_floor`:<br>&nbsp;&nbsp;&nbsp;&nbsp;• If greater: Print moving up.<br>&nbsp;&nbsp;&nbsp;&nbsp;• If lesser: Print moving down.<br>&nbsp;&nbsp;&nbsp;&nbsp;• If equal: Print already on floor / open door.<br>4. Update `current_floor = requested_floor`. | • Movement status logs<br>• Door opening notifications |
+| • Number of requests, `requested_floor` | 1. Accept request count.<br>2. Loop through requests and compare with current floor.<br>3. Print movement status and update floor tracker. | • Movement logs<br>• Door notifications |
 
 ---
 
@@ -59,14 +58,14 @@ Welcome to the repository! This project contains modular C programs along with t
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
 | :--- | :--- |
-| **Given (Inputs)** | • Total number of students<br>• Marks for 5 individual subjects per student (out of 100) |
-| **Required (Outputs)** | • Total marks and average percentage per student<br>• Failure deficiency counts and academic grading result |
-| **Processing & Logic** | • Uses nested `while` loops (outer for students, inner for 5 subjects).<br>• Tracks failed subjects (marks $< 33$).<br>• Evaluates grade categories: Distinction ($\ge 80$), Pass ($\ge 60$), Fail, or Subject Deficiency. |
+| **Given (Inputs)** | • Total number of students<br>• Marks for 5 subjects per student |
+| **Required (Outputs)** | • Total marks and average percentage<br>• Failure deficiency counts and academic status |
+| **Processing & Logic** | • Uses nested loops for students and subjects.<br>• Tracks failed subjects ($<33$ marks).<br>• Evaluates grade classifications (Distinction $\ge 80$, Pass $\ge 60$, Fail). |
 
 #### IPO Table (Input-Process-Output)
 | Inputs | Processing Steps | Outputs |
 | :--- | :--- | :--- |
-| • `students`<br>• Subject `marks` (5 per student) | 1. Read total students.<br>2. Loop through each student:<br>&nbsp;&nbsp;&nbsp;&nbsp;• Inner loop collects 5 subject marks.<br>&nbsp;&nbsp;&nbsp;&nbsp;• Accumulates total sum and counts failures ($<33$).<br>&nbsp;&nbsp;&nbsp;&nbsp;• Calculates average.<br>&nbsp;&nbsp;&nbsp;&nbsp;• Assigns status (Distinction, Pass, Fail).<br>3. Print student summaries. | • Total marks<br>• Average percentage<br>• Result classification (Pass/Fail/Distinction) |
+| • Student count, Subject `marks` | 1. Read student count.<br>2. Collect 5 subject marks per student.<br>3. Calculate totals, averages, and check pass/fail criteria. | • Total marks, average percentage, and final status |
 
 ---
 
@@ -75,28 +74,43 @@ Welcome to the repository! This project contains modular C programs along with t
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
 | :--- | :--- |
-| **Given (Inputs)** | • Item quantity and price per item<br>• Discount percentage and tax percentage |
-| **Required (Outputs)** | • Subtotal, discounted amount, and final total bill<br>• Input validation error messages |
-| **Processing & Logic** | • Validates that quantities/prices are positive and percentages are within valid ranges ($0$ to $<100$).<br>• Computes subtotal ($\text{quantity} \times \text{price}$).<br>• Applies discount deduction, then adds applicable tax. |
+| **Given (Inputs)** | • Item quantity and unit price<br>• Discount percentage and tax percentage |
+| **Required (Outputs)** | • Subtotal, discount amount, and final total bill<br>• Input validation error messages |
+| **Processing & Logic** | • Validates positive values and valid percentage ranges.<br>• Computes subtotal, applies discount, and adds applicable tax. |
 
 #### IPO Table (Input-Process-Output)
 | Inputs | Processing Steps | Outputs |
 | :--- | :--- | :--- |
-| • `quantity`<br>• `price_per_item`<br>• `discount_per`<br>• `tax_per` | 1. Prompt and read inputs.<br>2. Validate input ranges; terminate with error if invalid.<br>3. Calculate subtotal.<br>4. Compute discounted amount.<br>5. Calculate final bill with tax addition. | • Subtotal value<br>• Discounted amount<br>• Final bill total |
+| • `quantity`, `price_per_item`, `discount_per`, `tax_per` | 1. Read and validate inputs.<br>2. Compute subtotal.<br>3. Calculate discount deduction and tax addition. | • Subtotal value<br>• Discounted amount<br>• Final bill total |
 
 ---
 
-### Program 5: Campus Parking & EV Charging Management System (`ev_charging_system.c`)
+### Program 5: Campus Parking Management System (`q5.c`)
 
 #### PAC Chart (Problem Analysis Chart)
 | Category | Description |
 | :--- | :--- |
-| **Given (Inputs)** | • Vehicle type (`E`, `H`), battery levels, and charging deficit<br>• Parking hours and time of day (24-hr format)<br>• Membership, disabled status, and station availability |
-| **Required (Outputs)** | • Charging qualification status and priority level (P1–P3)<br>• Peak/off-peak rates, itemized costs, and discounts<br>• Final payable amount and long-stay warnings |
-| **Processing & Logic** | • Validates inputs and enforces powertrain/battery eligibility.<br>• Assigns priority tiers (Emergency, Priority, Normal).<br>• Computes peak (Rs. 50) vs off-peak (Rs. 35) electricity charges.<br>• Calculates tiered parking fees with member/disabled exemptions. |
+| **Given (Inputs)** | • Total vehicles to process<br>• Vehicle type (`C`, `B`, `V`)<br>• User category (`F` Faculty, `S` Student, `G` Visitor)<br>• Permit status (`Y`/`N`) and Emergency status (`Y`/`N`) |
+| **Required (Outputs)** | • Acceptance/rejection status logs<br>• Zone occupancy counts and remaining capacities<br>• Summary report with highest occupancy zone and campus full status |
+| **Processing & Logic** | • Validates inputs and rejects vehicles without permits unless they are emergency vehicles.<br>• Assigns space requirements (Vans take 2 spaces, Cars/Bikes take 1).<br>• Allocates zones based on user category (Zone A for Faculty, Zone B/C for Students, Zone C for Visitors) and checks available capacity.<br>• Tracks total accepted/rejected counts and evaluates peak zone occupancy. |
 
 #### IPO Table (Input-Process-Output)
 | Inputs | Processing Steps | Outputs |
 | :--- | :--- | :--- |
-| • Powertrain, battery, & time data<br>• User status flags & parking duration | 1. Validate inputs and check station/battery qualification.<br>2. Determine charging deficit and priority category.<br>3. Check peak status and compute electricity costs.<br>4. Calculate parking fees and apply exemptions/discounts.<br>5. Generate comprehensive summary report. | • Charging & parking cost breakdowns<br>• Applied discounts & final payable amount<br>• Status messages & warnings |
+| • `total_processed`<br>• `vehicle_type`<br>• `user_category`<br>• `permit_status`<br>• `emergency_status` | 1. Read total vehicles to process.<br>2. Loop through each vehicle: validate inputs and permit/emergency status.<br>3. Determine required spaces and check zone availability based on user category.<br>4. Update zone occupancy and log success/rejection.<br>5. Generate final summary report, calculate highest occupancy zone, and check if campus is full. | • Acceptance/rejection messages<br>• Remaining zone capacities<br>• Comprehensive campus summary report |
 
+---
+
+### Program 6: Campus Parking & EV Charging System (`q6.c`)
+
+#### PAC Chart (Problem Analysis Chart)
+| Category | Description |
+| :--- | :--- |
+| **Given (Inputs)** | • Vehicle type (`E` Electric, `H` Hybrid)<br>• Battery charge level & required charging level (0–100)<br>• Parking hours & current time (24-hr format)<br>• Membership, disabled status, and station availability |
+| **Required (Outputs)** | • Charging qualification status & priority level (P1–P3)<br>• Peak/off-peak rate status and itemized costs<br>• Final payable amount and long-stay duration warnings |
+| **Processing & Logic** | • Validates input ranges and checks station availability/powertrain eligibility.<br>• Computes charging deficit and assigns priority tiers (Priority 1 for emergencies, 2 for disabled/members with low battery, 3 for normal).<br>• Computes peak (Rs. 50) vs off-peak (Rs. 35) rates and applies membership discounts.<br>• Calculates tiered parking fees with exemptions for disabled individuals and member discounts.<br>• Summarizes total costs and generates warning alerts. |
+
+#### IPO Table (Input-Process-Output)
+| Inputs | Processing Steps | Outputs |
+| :--- | :--- | :--- |
+| • Vehicle & battery data<br>• Parking hours & time<br>• User status flags | 1. Prompt and validate user inputs.<br>2. Check station availability and hybrid/electric charging eligibility.<br>3. Compute deficit, assign priority tier, and determine peak/off-peak rates.<br>4. Calculate charging costs with applicable discounts.<br>5. Compute parking fees based on duration and exemptions.<br>6. Output comprehensive system summary report. | • Itemized charging & parking costs<br>• Applied discounts & final payable amount<br>• System summary report & warnings |
