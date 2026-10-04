@@ -1,3 +1,6 @@
+- **Name:** Muhammad Mubarak Malik
+- **Student ID:** [26k-0017]
+- **Class Section:** BAI-1A
 # C Programming Assignments - System Design & Documentation
 
 Welcome to the repository! This project contains all course assignments organized into **Part A (Algorithms & Pseudocode)** and **Part B (System Design, PAC/IPO Tables, & C Programs)**.
